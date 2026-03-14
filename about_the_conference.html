@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О конференции | Неориентированные графы</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Подключаем jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Подключаем API Яндекс.Карт с вашим ключом -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=cfb238a0-837f-4ac4-90ba-5cce193df10d&lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container header-container">
+            <button class="burger-menu" id="burgerBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="logo">
+                <a href="index.html">Неориентированные графы</a>
+            </div>
+        </div>
+        
+        <nav class="nav-menu" id="navMenu">
+            <ul class="nav-list">
+                <li><a href="index.html">Главная</a></li>
+                <li class="tasks-group">
+                    <span class="tasks-label">Задачи:</span>
+                    <ul class="tasks-list">
+                        <li><a href="task/task_0.html">Задача 0</a></li>
+                        <li><a href="task/task_1.html">Задача 1</a></li>
+                        <li><a href="task/task_2.html">Задача 2</a></li>
+                        <li><a href="task/task_3.html">Задача 3</a></li>
+                        <li><a href="task/task_4.html">Задача 4</a></li>
+                        <li><a href="task/task_5.html">Задача 5</a></li>
+                        <li><a href="task/task_6.html">Задача 6</a></li>
+                        <li><a href="task/task_7.html">Задача 7</a></li>
+                        <li><a href="task/task_8.html">Задача 8</a></li>
+                        <li><a href="task/task_9.html">Задача 9</a></li>
+                        <li><a href="task/task_10.html">Задача 10</a></li>
+                        <li><a href="task/task_11.html">Задача 11</a></li>
+                        <li><a href="task/task_12.html">Задача 12</a></li>
+                    </ul>
+                </li>
+                <li><a href="about_graphs.html">О графах</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero секция -->
+        <section class="hero" style="padding: 60px 20px;">
+            <div class="container">
+                <h1 class="hero-title">О конференции</h1>
+                <p class="hero-subtitle">Неориентированные графы — теория и практика</p>
+            </div>
+        </section>
+
+        <!-- Блок с темой и целями -->
+        <section class="conference-intro">
+            <div class="container">
+                <div class="conference-grid">
+                    <!-- Левый блок - тема -->
+                    <div class="conference-theme">
+                        <h2>Тема конференции</h2>
+                        <h3>Неориентированные графы</h3>
+                        <p>Конференция посвящена фундаментальным и прикладным аспектам теории неориентированных графов — одному из ключевых разделов дискретной математики и современного программирования.</p>
+                        <p>Участники познакомятся с различными способами представления графов, алгоритмами обхода, анализом структуры графов и их применением в реальных задачах.</p>
+                        <div class="theme-highlight">
+                            <span>Количество задач: 13</span>
+                            <span>Участников: 3</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Правый блок - цели -->
+                    <div class="conference-goals">
+                        <h2>Цели конференции</h2>
+                        <ul class="goals-list">
+                            <li>
+                                <span class="goal-number">01</span>
+                                <div class="goal-content">
+                                    <h4>Изучение представлений графов</h4>
+                                    <p>Освоить матрицу смежности, матрицу инцидентности и списки смежности как способы задания графов</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="goal-number">02</span>
+                                <div class="goal-content">
+                                    <h4>Анализ структуры графа</h4>
+                                    <p>Научиться определять степени вершин, компоненты связности, эйлеровость и двудольность графов</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="goal-number">03</span>
+                                <div class="goal-content">
+                                    <h4>Алгоритмы обхода</h4>
+                                    <p>Реализовать и протестировать обход в глубину (DFS) и обход в ширину (BFS)</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="goal-number">04</span>
+                                <div class="goal-content">
+                                    <h4>Минимальные пути и деревья</h4>
+                                    <p>Построение минимального остовного дерева и нахождение кратчайших путей в графах</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="goal-number">05</span>
+                                <div class="goal-content">
+                                    <h4>Кодирование и раскраска</h4>
+                                    <p>Реализация кодирования Прюфера и алгоритмов раскраски графов</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок с картой и информацией -->
+        <section class="conference-location">
+            <div class="container">
+                <h2 class="section-title">Место проведения</h2>
+                <div class="location-grid">
+                    <!-- Большой блок с картой -->
+                    <div class="map-block">
+                        <div class="map-container">
+                            <h3>Наш офис:</h3>
+                            <div id="yandex-map-irkt" style="width: 100%; height: 400px; border-radius: 15px; border: 3px solid #FFC4C4;"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Маленький блок с информацией -->
+                    <div class="info-block-small">
+                        <h3>Детали проведения</h3>
+                        <div class="info-detail">
+                            <span class="info-icon">📍</span>
+                            <div class="info-text">
+                                <strong>Адрес:</strong>
+                                <p>г. Иркутск, ул. Гагарина, 20</p>
+                            </div>
+                        </div>
+                        <div class="info-detail">
+                            <span class="info-icon">🚪</span>
+                            <div class="info-text">
+                                <strong>Кабинет:</strong>
+                                <p>Будет уточнено</p>
+                            </div>
+                        </div>
+                        <div class="info-detail">
+                            <span class="info-icon">⏰</span>
+                            <div class="info-text">
+                                <strong>Время проведения:</strong>
+                                <p>Будет уточнено</p>
+                            </div>
+                        </div>
+                        <div class="info-detail">
+                            <span class="info-icon">📧</span>
+                            <div class="info-text">
+                                <strong>Контактный email:</strong>
+                                <p>conference@graphs.ru</p>
+                            </div>
+                        </div>
+                        <div class="info-note">
+                            <p>Точная дата и время будут объявлены дополнительно.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-links">
+                <a href="about_us.html">О нас</a>
+                <a href="about_the_conference.html">О конференции</a>
+                <a href="about_graphs.html">О графах</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2026 Неориентированные графы. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Подключаем ваш файл с JavaScript -->
+    <script src="js/js_burger_and_owlcarousel.js"></script>
+</body>
+</html>

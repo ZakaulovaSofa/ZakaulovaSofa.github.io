@@ -54,3 +54,52 @@ $(document).ready(function() {
         }
     });
 });
+
+// ========== ФУНКЦИЯ ДЛЯ ЯНДЕКС.КАРТЫ ==========
+function initYandexMap() {
+    // Проверяем, есть ли элемент карты на странице
+    if (document.getElementById('yandex-map-irkt')) {
+        console.log('Создаем карту...');
+        
+        try {
+            var map = new ymaps.Map("yandex-map-irkt", {
+                center: [52.27515415312987, 104.27977082209006],
+                zoom: 17,
+                controls: ['zoomControl']
+            });
+
+            var placemark = new ymaps.Placemark([52.27515415312987, 104.27977082209006], {
+                hintContent: 'ул. Гагарина, 20',
+                balloonContent: '<div style="padding: 5px;"><strong>ул. Гагарина, 20</strong><br>Иркутск, Россия</div>'
+            }, {
+                preset: 'islands#redDotIcon',
+                iconColor: '#E36D6D'  // Розовый цвет под наш сайт
+            });
+
+            map.controls.remove('geolocationControl');
+            map.controls.remove('searchControl');
+            map.controls.remove('trafficControl');
+            map.controls.remove('typeSelector');
+
+            map.geoObjects.add(placemark);
+            placemark.balloon.open();
+
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                map.behaviors.disable('drag');
+            }
+            
+            console.log('Карта успешно создана!');
+        } catch (error) {
+            console.error('Ошибка при создании карты:', error);
+        }
+    } else {
+        console.log('Элемент карты не найден на этой странице');
+    }
+}
+
+// Загружаем API Яндекс.Карт и инициализируем карту
+if (typeof ymaps !== 'undefined') {
+    ymaps.ready(initYandexMap);
+} else {
+    console.log('ymaps не загружен');
+}
