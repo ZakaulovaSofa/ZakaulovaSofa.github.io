@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 0 | Неориентированные графы</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Подключаем jQuery (может понадобиться для будущих скриптов) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <!-- ========== ШАПКА (одинаковая для всех страниц) ========== -->
+    <header class="header">
+        <div class="container header-container">
+            <button class="burger-menu" id="burgerBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="logo">
+                <a href="../index.html">Неориентированные графы</a>
+            </div>
+        </div>
+
+        <nav class="nav-menu" id="navMenu">
+            <ul class="nav-list">
+                <li><a href="../index.html">Главная</a></li>
+                <li class="tasks-group">
+                    <span class="tasks-label">Задачи:</span>
+                    <ul class="tasks-list">
+                        <li><a href="task_0.html" class="active">Задача 0</a></li>
+                        <li><a href="task_1.html">Задача 1</a></li>
+                        <li><a href="task_2.html">Задача 2</a></li>
+                        <li><a href="task_3.html">Задача 3</a></li>
+                        <li><a href="task_4.html">Задача 4</a></li>
+                        <li><a href="task_5.html">Задача 5</a></li>
+                        <li><a href="task_6.html">Задача 6</a></li>
+                        <li><a href="task_7.html">Задача 7</a></li>
+                        <li><a href="task_8.html">Задача 8</a></li>
+                        <li><a href="task_9.html">Задача 9</a></li>
+                        <li><a href="task_10.html">Задача 10</a></li>
+                        <li><a href="task_11.html">Задача 11</a></li>
+                        <li><a href="task_12.html">Задача 12</a></li>
+                    </ul>
+                </li>
+                <li><a href="../about_graphs.html">О графах</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ========== ЗАГОЛОВОК ЗАДАЧИ ========== -->
+        <section class="task-hero">
+            <div class="container">
+                <div class="task-number-badge">Задача 1</div>
+                <h1 class="task-title-main">
+                    Обход в глубину (с проверкой)
+                </h1>
+                <p class="task-description-main">
+                    Система предлагает пользователю граф, заданный матрицей смежности (или матрицей инцидентности или
+                    списками смежности). Пользователь вводит обход графа по алгоритму обхода в глубину. Система
+                    проверяет правильность.
+                </p>
+            </div>
+        </section>
+
+        <!-- ========== ОСНОВНОЙ БЛОК С ИНТЕРАКТИВОМ ========== -->
+        <section class="task-interactive">
+            <div class="container">
+                <div class="interactive-grid">
+                    <!-- ===== ЛЕВАЯ КОЛОНКА: ВВОД И ВЫВОД ===== -->
+                    <div class="left-column">
+                        <!-- БЛОК ВВОДА -->
+                        <div class="input-block" data-block="input">
+                            <div class="block-header">
+                                <h2>Ввод данных</h2>
+                                <span class="block-description">Задайте граф одним из способов</span>
+                            </div>
+                            <div class="block-content">
+                                <!-- ⚠️ КОММЕНТАРИЙ ДЛЯ РАЗРАБОТЧИКА:
+                                     Сюда будет подключаться JS для ввода графа.
+                                     Можно использовать:
+                                     - текстовое поле
+                                     - radio-кнопки для выбора способа ввода
+                                     - таблицу для матрицы смежности
+                                     - или другой элемент по вашему усмотрению
+                                -->
+                                <div class="input-placeholder">
+                                    <p class="placeholder-text">[ Место для элемента ввода ]</p>
+                                    <p class="placeholder-hint">Сюда будет встроен компонент ввода графа</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- КНОПКА НАЧАТЬ -->
+                        <div class="button-block" data-block="button">
+                            <!-- ⚠️ КОММЕНТАРИЙ ДЛЯ РАЗРАБОТЧИКА:
+                                 Эта кнопка запускает обработку введенных данных.
+                                 При клике вызывает функцию calculate() или аналогичную.
+                            -->
+                            <button class="task-action-button" id="startButton">
+                                <span class="button-text">Начать</span>
+                                <span class="button-icon">→</span>
+                            </button>
+                        </div>
+
+                        <!-- БЛОК ВЫВОДА (РЕЗУЛЬТАТ В ЧИСЛОВОМ ВИДЕ) -->
+                        <div class="output-block" data-block="output">
+                            <div class="block-header">
+                                <h2>Результат</h2>
+                                <span class="block-description">Числовое представление графа</span>
+                            </div>
+                            <div class="block-content">
+                                <!-- ⚠️ КОММЕНТАРИЙ ДЛЯ РАЗРАБОТЧИКА:
+                                     Сюда будет выводиться результат обработки:
+                                     - степени вершин
+                                     - матрицы смежности
+                                     - список смежности
+                                     - и т.д. в текстовом/числовом виде
+                                -->
+                                <div class="output-placeholder">
+                                    <pre class="output-pre"> Результат появится здесь </pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== ПРАВАЯ КОЛОНКА: ГРАФИЧЕСКОЕ ПРЕДСТАВЛЕНИЕ ===== -->
+                    <div class="right-column">
+                        <div class="graph-block" data-block="graph">
+                            <div class="block-header">
+                                <h2>Графическое представление графа</h2>
+                                <span class="block-description">Визуализация графа с помощью библиотеки</span>
+                            </div>
+                            <div class="graph-container">
+                                <!-- ⚠️ КОММЕНТАРИЙ ДЛЯ РАЗРАБОТЧИКА:
+                                     Сюда будет подключаться библиотека для визуализации графов.
+                                     Рекомендации:
+                                     - Используйте canvas или div для отрисовки
+                                     - Библиотеки: vis.js, sigma.js, cytoscape.js или d3.js
+                                     - Граф будет отрисовываться на основе данных из блока ввода
+                                     - При клике на "Начать" обновлять визуализацию
+                                -->
+                                <div class="graph-placeholder">
+                                    <p class="placeholder-text">Сюда будет встроена визуализация графа</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== БЛОК "СВОДКА ИНФОРМАЦИИ" ========== -->
+        <section class="task-summary">
+            <div class="container">
+                <h2 class="summary-title">Сводка информации по задаче</h2>
+                <!-- ⚠️ КОММЕНТАРИЙ ДЛЯ РАЗРАБОТЧИКА:
+                         Здесь будет отображаться дополнительная информация:
+                         - Пояснения к результатам
+                         - Теоретическая справка
+                         - Подсказки
+                         - История вычислений
+                         Заполните эти блоки контентом по необходимости.
+                    -->
+                <div class="summary-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                    <!-- Степени вершин -->
+                    <div class="summary-item">
+                        <h3>Степени вершин</h3>
+                        <p class="summary-placeholder">[будет заполнено]</p>
+                    </div>
+
+                    <!-- Компоненты связности -->
+                    <div class="summary-item">
+                        <h3>Компоненты связности</h3>
+                        <p class="summary-placeholder">[будет заполнено]</p>
+                    </div>
+
+                    <!-- Эти блоки просто отсутствуют в HTML для задач, где они не нужны -->
+                </div>
+            </div>
+        </section>
+        <!-- ========== ИНФОРМАЦИОННЫЙ БЛОК ========== -->
+        <section class="info-block-full">
+            <div class="container">
+                <div class="info-content-rounded">
+                    <h2 class="info-title">Основные понятия теории графов</h2>
+                    <div class="info-text">
+                        <p>Колобок от бабушки ушёл, от дедушки ушёл... А по какому графу он катился?</p>
+                        <p>Если бы Колобок строил минимальное остовное дерево, он бы не встретил ни лису, ни волка!</p>
+                        <p>Алгоритм Дейкстры помог бы Колобку найти кратчайший путь до дома.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== ПОДВАЛ ========== -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-links">
+                <a href="../about_us.html">О нас</a>
+                <a href="../about_the_conference.html">О конференции</a>
+                <a href="../about_graphs.html">О графах</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2026 Неориентированные графы. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== ПОДКЛЮЧЕНИЕ СКРИПТОВ ========== -->
+    <!-- Базовый скрипт для бургер-меню (уже в файле) -->
+    <script src="../js/js_burger_and_owlcarousel.js"></script>
+
+    <!-- ⚠️ КОММЕНТАРИЙ ДЛЯ РАЗРАБОТЧИКА:
+         Сюда подключайте специфический JS для конкретной задачи.
+         Например:
+         <script src="js/task_0.js"></script>
+         Этот скрипт должен содержать функции для:
+         - обработки ввода
+         - валидации данных
+         - вычислений
+         - обновления визуализации
+         - вывода результатов
+    -->
+    <!-- <script src="js/task_0.js"></script> -->
+</body>
+
+</html>
