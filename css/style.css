@@ -81,16 +81,16 @@ body {
 /* Навигационное меню */
 /* Навигационное меню - ИСПРАВЛЕННАЯ ВЕРСИЯ */
 .nav-menu {
-    position: fixed;  /* Меняем с absolute на fixed */
+    position: fixed; /* Меняем с absolute на fixed */
     top: 70px;
     left: -100%;
     width: 100%;
-    height: calc(100vh - 70px);  /* Добавляем высоту на весь экран */
+    height: calc(100vh - 70px); /* Добавляем высоту на весь экран */
     background-color: #FFC4C4;
     transition: left 0.3s ease;
     box-shadow: 0 5px 10px rgba(227, 109, 109, 0.2);
     z-index: 999;
-    overflow-y: auto;  /* Добавляем прокрутку */
+    overflow-y: auto; /* Добавляем прокрутку */
 }
 
 .nav-menu.active {
@@ -100,8 +100,8 @@ body {
 .nav-list {
     list-style: none;
     padding: 20px;
-    padding-bottom: 40px;  /* Добавляем отступ снизу */
-    min-height: 100%;  /* Растягиваем на всю высоту */
+    padding-bottom: 40px; /* Добавляем отступ снизу */
+    min-height: 100%; /* Растягиваем на всю высоту */
 }
 
 .nav-list li {
@@ -109,7 +109,7 @@ body {
 }
 
 .nav-list li:last-child {
-    margin-bottom: 0;  /* Убираем отступ у последнего элемента */
+    margin-bottom: 0; /* Убираем отступ у последнего элемента */
 }
 
 .nav-list a {
@@ -462,43 +462,44 @@ body {
     .hero-title {
         font-size: 2rem;
     }
-    
+
     .hero-subtitle {
         font-size: 1.2rem;
     }
-    
+
     .section-title {
         font-size: 2rem;
     }
-    
+
     .developer-image {
         width: 140px;
         height: 140px;
     }
-    
+
     .owl-item.center .developer-image {
         width: 160px;
         height: 160px;
     }
-    
+
     .developer-name {
         font-size: 1.2rem;
     }
-    
+
     .owl-item.center .developer-name {
         font-size: 1.4rem;
     }
-    
+
     .footer-links {
         flex-direction: column;
         gap: 15px;
         align-items: center;
     }
-    
+
     .footer-links a {
         margin: 0;
     }
 }
+
 /* Стили для страницы "О нас" */
 .team-info {
     padding: 60px 0;
@@ -612,15 +613,15 @@ body {
     .info-block {
         padding: 30px 20px;
     }
-    
+
     .info-name {
         font-size: 1.5rem;
     }
-    
+
     .info-role {
         font-size: 1.1rem;
     }
-    
+
     .info-list li {
         font-size: 1rem;
         padding-left: 25px;
@@ -696,7 +697,7 @@ body {
     .team-grid {
         gap: 20px;
     }
-    
+
     .team-image {
         width: 150px;
         height: 150px;
@@ -711,7 +712,7 @@ body {
         gap: 25px;
         max-width: 350px;
     }
-    
+
     .team-image {
         width: 160px;
         height: 160px;
@@ -728,6 +729,7 @@ body {
         min-height: 140px;
     }
 }
+
 /* Выделение для тимлида (в центре) */
 .team-card-lead {
     transform: scale(1.05);
@@ -763,7 +765,7 @@ body {
         transform: scale(1);
         order: -1; /* На мобилке тимлид будет первым */
     }
-    
+
     .team-card-lead:hover {
         transform: translateY(-5px);
     }
@@ -894,22 +896,22 @@ body {
         padding: 20px;
         margin-bottom: 30px;
     }
-    
+
     .tasks-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-    
+
     .task-item {
         padding: 20px;
     }
-    
+
     .task-number {
         width: 45px;
         height: 45px;
         font-size: 1.5rem;
     }
-    
+
     .task-title {
         font-size: 1.3rem;
     }
@@ -920,6 +922,7 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
 /* Стили для страницы "О конференции" */
 .conference-intro {
     padding: 60px 0;
@@ -928,7 +931,7 @@ body {
 
 .conference-grid {
     display: grid;
-    grid-template-columns: 1fr 1.3fr;  /* Правый блок чуть шире */
+    grid-template-columns: 1fr 1.3fr; /* Правый блок чуть шире */
     gap: 30px;
     align-items: stretch;
 }
@@ -996,7 +999,7 @@ body {
     border-radius: 20px;
     box-shadow: 0 15px 40px rgba(227, 109, 109, 0.3);
     color: white;
-    min-height: 100%;  /* Делает блок выше */
+    min-height: 100%; /* Делает блок выше */
 }
 
 .conference-goals h2 {
@@ -1110,26 +1113,26 @@ body {
     .conference-location {
         padding: 40px 15px;
     }
-    
+
     .location-grid {
         grid-template-columns: 1fr; /* Один блок под другим */
         gap: 25px;
         padding: 0; /* Убираем лишние отступы */
         width: 100%;
     }
-    
-    .map-block, 
+
+    .map-block,
     .info-block-small {
         width: 100%;
         margin: 0; /* Убираем внешние отступы */
         padding: 20px; /* Уменьшаем внутренние отступы */
         box-sizing: border-box;
     }
-    
+
     #yandex-map-irkt {
         height: 350px; /* Чуть меньше на мобилках */
     }
-    
+
     .info-block-small {
         padding: 20px;
     }
@@ -1140,29 +1143,29 @@ body {
     .conference-location {
         padding: 30px 10px;
     }
-    
+
     .map-block {
         padding: 15px;
     }
-    
+
     .info-block-small {
         padding: 15px;
     }
-    
+
     #yandex-map-irkt {
         height: 300px;
     }
-    
+
     .info-detail {
         flex-direction: column;
         gap: 5px;
         margin-bottom: 15px;
     }
-    
+
     .info-icon {
         font-size: 1.5rem;
     }
-    
+
     .info-text {
         width: 100%;
     }
@@ -1187,7 +1190,7 @@ body {
     padding: 8px 25px;
     border-radius: 30px;
     margin-bottom: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .task-title-main {
@@ -1404,11 +1407,11 @@ body {
         grid-template-columns: 1fr;
         gap: 25px;
     }
-    
+
     .summary-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .task-title-main {
         font-size: 1.8rem;
     }
@@ -1418,31 +1421,31 @@ body {
     .task-hero {
         padding: 40px 15px;
     }
-    
+
     .task-title-main {
         font-size: 1.5rem;
     }
-    
+
     .task-description-main {
         font-size: 1rem;
     }
-    
+
     .task-number-badge {
         font-size: 1rem;
         padding: 6px 20px;
     }
-    
+
     .summary-grid {
         grid-template-columns: 1fr;
         gap: 15px;
     }
-    
+
     .task-action-button {
         width: 100%;
         padding: 12px 30px;
         font-size: 1.1rem;
     }
-    
+
     .block-header h2 {
         font-size: 1.1rem;
     }
@@ -1507,15 +1510,15 @@ body {
     .info-content-rounded {
         padding: 25px;
     }
-    
+
     .info-title {
         font-size: 1.5rem;
     }
-    
+
     .info-text {
         font-size: 1rem;
     }
-    
+
     .info-text p {
         padding-left: 15px;
     }
@@ -1555,4 +1558,15 @@ body {
     border-color: #E36D6D;
     color: #6D3A3A;
     background-color: #FFEEEE;
+}
+
+#graphDataTextarea, #componentsAnswerInput {
+    width: 100%;
+    resize: vertical;
+    padding: 12px;
+    box-sizing: border-box;
+    font-family: monospace;
+    background-color: #FFEEEE;
+    color: #6D3A3A;
+    border-color: #E36D6D;
 }
