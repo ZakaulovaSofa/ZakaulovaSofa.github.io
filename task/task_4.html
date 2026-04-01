@@ -58,7 +58,8 @@
                     Обход в ширину (проверка)
                 </h1>
                 <p class="task-description-main">
-                    Система предлагает пользователю граф, заданный матрицей смежности (или матрицей инцидентности или списками смежности). Пользователь вводит обход графа по алгоритму обхода в ширину. Система проверяет правильность.
+                    Система предлагает пользователю граф, заданный списками смежности.
+                    Пользователь вводит обход графа по алгоритму обхода в ширину. Система проверяет правильность.
             </div>
         </section>
 
@@ -72,7 +73,7 @@
                         <div class="input-block" data-block="input">
                             <div class="block-header">
                                 <h2>Ввод данных</h2>
-                                <span class="block-description">Задайте граф одним из способов</span>
+                                <span class="block-description">Напишите обход графа по алгоритму BFS</span>
                             </div>
                             <div class="block-content">
                                 <!-- ⚠️ КОММЕНТАРИЙ ДЛЯ РАЗРАБОТЧИКА:
@@ -225,6 +226,8 @@
          - обновления визуализации
          - вывода результатов
     -->
-    <!-- <script src="js/task_0.js"></script> -->
+<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+<script src="../js/graph_renderer.js"></script>
+<script src="../js/task_4.js"></script>
 </body>
 </html>
