@@ -931,49 +931,86 @@ body {
 
 .conference-grid {
     display: grid;
-    grid-template-columns: 1fr 1.3fr; /* Правый блок чуть шире */
+    grid-template-columns: 1fr 1.3fr; /* По умолчанию две колонки на десктопе */
     gap: 30px;
     align-items: stretch;
 }
 
-.conference-theme {
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(227, 109, 109, 0.15);
-    border: 2px solid #FFC4C4;
+/* ГЛАВНОЕ ИСПРАВЛЕНИЕ: на мобильных устройствах переключаем на одну колонку */
+@media (max-width: 768px) {
+    .conference-grid {
+        grid-template-columns: 1fr; /* Одна колонка */
+        gap: 25px;
+    }
+    
+    .conference-theme {
+        padding: 25px;
+        order: 1; /* Тема сверху */
+    }
+    
+    .conference-goals {
+        padding: 25px;
+        order: 2; /* Цели снизу */
+        min-height: auto; /* Убираем min-height на мобилках */
+    }
+    
+    .conference-theme h2 {
+        font-size: 1.5rem;
+    }
+    
+    .conference-theme h3 {
+        font-size: 1.8rem;
+    }
+    
+    .conference-theme p {
+        font-size: 1rem;
+    }
+    
+    .theme-highlight {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .theme-highlight span {
+        text-align: center;
+    }
+    
+    .conference-goals h2 {
+        font-size: 1.5rem;
+    }
+    
+    .goals-list li {
+        gap: 15px;
+    }
+    
+    .goal-number {
+        font-size: 1.5rem;
+        min-width: 40px;
+    }
+    
+    .goal-content h4 {
+        font-size: 1rem;
+    }
+    
+    .goal-content p {
+        font-size: 0.85rem;
+    }
 }
 
-.conference-theme h2 {
-    color: #E36D6D;
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    position: relative;
-    padding-bottom: 10px;
-}
-
-.conference-theme h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 80px;
-    height: 3px;
-    background: linear-gradient(90deg, #FFC4C4, #E36D6D);
-}
-
-.conference-theme h3 {
-    color: #6D3A3A;
-    font-size: 2.2rem;
-    margin-bottom: 25px;
-    font-weight: 700;
-}
-
-.conference-theme p {
-    color: #6D3A3A;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    font-size: 1.1rem;
+/* Для очень маленьких экранов */
+@media (max-width: 480px) {
+    .conference-intro {
+        padding: 40px 0;
+    }
+    
+    .conference-theme,
+    .conference-goals {
+        padding: 20px;
+    }
+    
+    .conference-theme h3 {
+        font-size: 1.5rem;
+    }
 }
 
 .theme-highlight {
