@@ -324,16 +324,10 @@ function animateColoring(cy, steps) {
 
 function getColorPalette() {
     return [
-        '#E36D6D',
-        '#6DA7E3',
-        '#6DCB8B',
-        '#E3C56D',
-        '#B06DE3',
-        '#E38F6D',
-        '#5EC7C7',
-        '#D96DB4',
-        '#8BC34A',
-        '#FF8A65'
+        '#E36D6D', '#6DA7E3', '#6DCB8B', '#E3C56D', '#B06DE3',
+        '#E38F6D', '#5EC7C7', '#D96DB4', '#8BC34A', '#FF8A65',
+        '#6D8FE3', '#E3A16D', '#6DE3D6', '#C76DE3', '#E36DA7',
+        '#AEE36D', '#6DE3A1', '#E3D66D', '#D6A4E3', '#6DE3C7'
     ];
 }
 
